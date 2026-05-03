@@ -19,6 +19,11 @@ app.use('/api/goals', require('./routes/goals'));
 app.use('/api/ai', require('./routes/ai'));
 app.use('/api/market', require('./routes/market'));
 
+// Health Check API
+app.get('/', (req, res) => {
+  res.json({ message: "GrowWise AI Backend is running smoothly!" });
+});
+
 // Connect to MongoDB
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI;
