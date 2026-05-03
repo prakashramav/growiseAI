@@ -23,7 +23,9 @@ app.use('/api/market', require('./routes/market'));
 app.get('/', (req, res) => {
   res.json({ message: "GrowWise AI Backend is running smoothly!" });
 });
-
+app.get('/api/health', (req, res) => {
+  res.json({ message: "GrowWise AI Backend is running smoothly!" });
+});
 // Connect to MongoDB
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI;
